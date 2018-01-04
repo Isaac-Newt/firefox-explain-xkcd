@@ -1,0 +1,31 @@
+{
+  "applications": {
+    "gecko": {
+      "id": "explain-xkcd@isaac-newt.com",
+       "strict_min_version": "54.0"
+     }
+  },
+
+  "manifest_version": 2,
+  "name": "Explain XKCD",
+  "version": "0.0.1",
+
+  "description": "Get a quick explaination for the current XKCD comic",
+
+  "icons": {
+    "48": ""
+  },
+
+  "permissions": [
+    "tabs"
+  ],
+
+  "page_action": {
+    "default_icon": "icons/explain.png",
+    "default_title": "Explain This Comic"
+  },
+
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
