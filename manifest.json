@@ -17,7 +17,8 @@
   },
 
   "permissions": [
-    "tabs"
+    "tabs",
+    "contextMenus"
   ],
 
   "page_action": {
