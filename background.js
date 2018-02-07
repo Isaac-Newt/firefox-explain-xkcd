@@ -8,38 +8,38 @@ function handleClick() {
   gettingActiveTab.then((tabs) => {
     let tab = tabs[0];
       // Debugging stuff
-      console.log(tab.url);
-      console.log(tab.url.slice(0, 11));
+      // console.log(tab.url);
+      // console.log(tab.url.slice(0, 11));
 
-    // Modify URL
-    /*
-     * The issue is that this slice(17) thing
-     * only works on the non-www domain. Will
-     * solve with a bad if/else statement. This
-     * should be replaced *SOON*!
-     */
+    // Modify the URL
 
     // For www domain
     if (tab.url.slice(0, 11) == "https://www") {
       let url = tab.url;
         // Debugging stuff
-        console.log(url.slice(0, 11));
-        console.log(url.slice(20));
+        // console.log(url.slice(0, 11));
+        // console.log(url.slice(20));
 
       let newURL = "https://explainxkcd.com/" + url.slice(20);
         // Debugging stuff
-        console.log(newURL);
+        // console.log(newURL);
+        browser.tabs.create({
+          "url": newURL
+        });
     }
 
     // For normal domain
     else {
       let url = tab.url;
         // Debugging stuff
-        console.log(url.slice(17));
+        // console.log(url.slice(17));
 
       let newURL = "https://explainxkcd.com/" + url.slice(17);
         // Debugging stuff
-        console.log(newURL);
+        // console.log(newURL);
+      browser.tabs.create({
+        "url": newURL
+      });
     }
 
   });
