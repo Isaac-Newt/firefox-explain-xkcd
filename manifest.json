@@ -13,7 +13,7 @@
   "description": "Get a quick explaination for the current XKCD comic",
 
   "icons": {
-    "48": ""
+    "48": "icons/icon.png"
   },
 
   "permissions": [
@@ -22,7 +22,7 @@
   ],
 
   "page_action": {
-    "default_icon": "icons/explain.png",
+    "default_icon": "icons/icon.png",
     "default_title": "Explain This Comic",
     "show_matches": ["https://xkcd.com/*", "https://*.xkcd.com/*"]
   },
